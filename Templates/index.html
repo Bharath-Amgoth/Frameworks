@@ -4,9 +4,17 @@
     <title>Flask Project</title>
 </head>
 <body>
-    <h1>Hello, {{name}}</h1>
-    <h2>course :  {{course}}</h2>
-    <h2>city :  {{city}}</h2>
-    <h2>age :  {{age}}</h2>
+    <!__ This is my Practice on Flask Course __>
+    <!__ Jinja2 Filters __>
+    <p>Welcome {{first_name|upper}}</p>
+    <h1>{{first_name|capitalize}} {{last_name|capitalize}}</h1>
+    <h2>Course :  {{course}}</h2>
+    <h2>City :  {{city|title}}</h2>
+    <h2>Age :  {{age}}</h2>
+    <!__ Jinja2 Expressions __>
+    <h2>Cost: {{price}}</h2>
+    <h2>Added gst: {{100}}</h2>
+    <h2>Discount: {{200}}</h2>
+    <h2>Total Price: {{price+100-200}}</h2>
 </body>
 </html>
