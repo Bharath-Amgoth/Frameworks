@@ -4,17 +4,24 @@
     <title>Flask Project</title>
 </head>
 <body>
-    <!__ This is my Practice on Flask Course __>
-    <!__ Jinja2 Filters __>
-    <p>Welcome {{first_name|upper}}</p>
-    <h1>{{first_name|capitalize}} {{last_name|capitalize}}</h1>
-    <h2>Course :  {{course}}</h2>
-    <h2>City :  {{city|title}}</h2>
-    <h2>Age :  {{age}}</h2>
-    <!__ Jinja2 Expressions __>
-    <h2>Cost: {{price}}</h2>
-    <h2>Added gst: {{100}}</h2>
-    <h2>Discount: {{200}}</h2>
-    <h2>Total Price: {{price+100-200}}</h2>
+    {% if is_logged_in %}
+    <h1>Hello Bharath</h1>
+    {% else %}
+    <h2>Please Login</h2>
+    {% endif %}
+
+    {% if marks >= 90 %}
+    <h2>A Grade</h2>
+    {% elif marks >=80 %}
+    <h2>B Grade</h2>
+    {% elif marks >=70 %}
+    <h2>c Grade</h2>
+    {% elif marks >= 60 %}
+    <h2>D Grade</h2>
+    {% elif marks >=50 %}
+    <h2>E Grade</h2>
+    {% else %}
+    <h2> you are Failed Better luck next time!</h2>
+    {%  endif %}
 </body>
 </html>
