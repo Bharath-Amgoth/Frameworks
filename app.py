@@ -1,9 +1,18 @@
-from flask import Flask,render_template
+from flask import Flask, render_template
 app=Flask(__name__)
 @app.route("/")
 def home():
-    is_logged_in= True
-    marks = 95.5
-    return render_template("index.html",is_logged_in=is_logged_in,marks=marks)
-if __name__ == ("__main__"):
+    courses=["Flask",
+             "Python",
+             "React",
+             "Django"]
+    #dict variables
+    student={
+        "Name":"Bharath Amgoth",
+        "Course":"Python Fullstack",
+        "Age":23,
+        "City":"Mahabubabad"
+    }
+    return render_template("index.html",courses=courses,student=student)
+if __name__==("__main__"):
     app.run(debug=True)

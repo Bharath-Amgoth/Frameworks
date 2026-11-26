@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Flask Project</title>
+    <title>Flask Practice</title>
 </head>
 <body>
-    {% if is_logged_in %}
-    <h1>Hello Bharath</h1>
-    {% else %}
-    <h2>Please Login</h2>
-    {% endif %}
+    <ul>
+    <h1>Courses:</h1>
+    {% for course in courses %}
+    <h2><li>{{loop.index}} {{course}}</li></h2>
+    {% endfor %}
+    </ul>
+<hr>
+<hr>
+    <h1>Student Details</h1>
+    <h2>
+        {% for key,value in student.items() %}
+    <li> {{key}} : {{value}}</li>
+    {% endfor %}
+    </h2>
 
-    {% if marks >= 90 %}
-    <h2>A Grade</h2>
-    {% elif marks >=80 %}
-    <h2>B Grade</h2>
-    {% elif marks >=70 %}
-    <h2>c Grade</h2>
-    {% elif marks >= 60 %}
-    <h2>D Grade</h2>
-    {% elif marks >=50 %}
-    <h2>E Grade</h2>
-    {% else %}
-    <h2> you are Failed Better luck next time!</h2>
-    {%  endif %}
 </body>
 </html>
