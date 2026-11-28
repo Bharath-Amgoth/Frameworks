@@ -1,6 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Welcome to Flask Course</h1>
-<h2>This is Home Page</h2>
-<button onclick="showMsg()">Click me</button>
+<div class="container">
+    <h1>Welcome to Flask Course</h1>
+    <h2>This is Home Page</h2>
+    <button onclick="loginMsg()" class='btn btn-primary'>Login</button>
+    <button onclick="logoutMsg()" class='btn btn-danger'>Logout</button>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">Flask Course</div>
+        <div class="col-md-4">Django Course</div>
+        <div class="col-md-4">FastAPI Course</div>
+    </div>
+</div>
+
 {% endblock %}
